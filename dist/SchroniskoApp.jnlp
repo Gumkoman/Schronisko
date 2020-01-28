@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="SchroniskoApp.jar" size="6290" download="eager" />
+    <jar href="SchroniskoApp.jar" size="8464" download="eager" />
     <jar href="lib\ojdbc7.jar" size="3698857" download="eager" />
   </resources>
   <jfx:javafx-desc  width="800" height="600" main-class="schroniskoapp.SchroniskoApp"  name="SchroniskoApp" />

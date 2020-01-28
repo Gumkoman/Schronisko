@@ -4,24 +4,34 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane id="AnchorPane" prefHeight="527.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="schroniskoapp.FXMLDocumentController">
     <children>
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <TableView fx:id="mainTable" layoutX="34.0" layoutY="113.0" prefHeight="313.0" prefWidth="460.0">
+      <TableView fx:id="tableSchroniska" layoutX="34.0" layoutY="113.0" prefHeight="264.0" prefWidth="460.0">
         <columns>
-          <TableColumn fx:id="idTable" prefWidth="118.0" text=" Id Schroniska" />
-          <TableColumn fx:id="nameTabel" prefWidth="73.0" text="Nazwa" />
-            <TableColumn fx:id="cityTable" prefWidth="109.0" text="Miejscowosc" />
-            <TableColumn fx:id="streetTable" prefWidth="82.0" text="Ulica" />
-            <TableColumn fx:id="numerTable" prefWidth="77.0" text="Nr Lokalu" />
+          <TableColumn fx:id="tableColumnIdSchroniska" prefWidth="85.0" text=" Id Schroniska" />
+          <TableColumn fx:id="tableColumnNazwa" prefWidth="106.0" text="Nazwa" />
+            <TableColumn fx:id="tableColumnMiejscowosc" prefWidth="109.0" text="Miejscowosc" />
+            <TableColumn fx:id="tableColumnUlica" prefWidth="82.0" text="Ulica" />
+            <TableColumn fx:id="tableColumnNrLokalu" prefWidth="77.0" text="Nr Lokalu" />
         </columns>
       </TableView>
-      <Button fx:id="searchButton" layoutX="428.0" layoutY="56.0" mnemonicParsing="false" text="Szukaj" />
+      <Button fx:id="searchButton" layoutX="428.0" layoutY="56.0" mnemonicParsing="false" onAction="#searchButtonOnAction" text="Szukaj" />
       <Label fx:id="titleLabel" layoutX="43.0" layoutY="14.0" prefHeight="31.0" prefWidth="193.0" text="Wyszukiwany parametr" />
       <Label fx:id="searchParamLabel" layoutX="43.0" layoutY="61.0" prefHeight="21.0" prefWidth="167.0" text="Nazwa Schroniska:" />
-      <TextArea fx:id="textInput" layoutX="195.0" layoutY="53.0" prefHeight="31.0" prefWidth="193.0" />
+      <TextField fx:id="textInput" layoutX="190.0" layoutY="59.0" />
+      <Label layoutX="526.0" layoutY="51.0" prefHeight="32.0" prefWidth="160.0" text="Dodaj schronisko" />
+      <Label layoutX="512.0" layoutY="121.0" prefHeight="18.0" prefWidth="54.0" text="Nazwa" />
+      <Label layoutX="512.0" layoutY="166.0" text="Miejscowosc" />
+      <TextField fx:id="TextFieldNazwaSchroniska" layoutX="598.0" layoutY="116.0" />
+      <TextField fx:id="TextFieldMiejscowoscSchroniska" layoutX="598.0" layoutY="162.0" />
+      <Button fx:id="addSchroniskoButton" layoutX="382.0" layoutY="421.0" mnemonicParsing="false" onAction="#buttonAddSchroniskoOnAction" text="Dodaj" />
+      <Label layoutX="512.0" layoutY="216.0" prefHeight="18.0" prefWidth="54.0" text="Ulica" />
+      <Label layoutX="511.0" layoutY="255.0" text="Nr Lokalu" />
+      <TextField fx:id="TextFieldUlicaSchroniska" layoutX="600.0" layoutY="204.0" />
+      <TextField fx:id="TextFieldNrLokaluSchroniska" layoutX="602.0" layoutY="251.0" />
     </children>
 </AnchorPane>
